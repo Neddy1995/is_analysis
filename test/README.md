@@ -4,8 +4,8 @@
 ## 作业
 
 ### 图6.1：考试及成绩管理流程
-[![](./flow1.png 'flow1')](./flow1.png){:target="_blank"}
+[![](./flow1.png 'flow1')](./flow1.png)
 
 
 ### 图6.2：客户维修服务流程
-[![](./flow2.png '百度')](./flow2.png){:target="_blank"}
+[![](./flow2.png '百度')](./flow2.png)
