@@ -1,0 +1,3 @@
+@startuml
+:men: --> (Start)
+@enduml
