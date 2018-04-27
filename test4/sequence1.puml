@@ -1,0 +1,44 @@
+@startuml
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 20
+skinparam maxmessagesize 60
+skinparam sequenceParticipant underline
+
+actor 图书管理员 as a
+participant "读者" as b
+participant "资源项" as c
+participant "馆藏资源品种" as d
+participant "借书记录" as e
+
+a ->b:验证读者
+activate a
+activate b
+b->a:读者信息
+a->b:读取读者可借限额
+deactivate b
+a->c:获取资源项
+activate c
+c->d:查找资源品种
+activate d
+d->c:书本信息
+deactivate d
+c->a:资源信息
+deactivate c
+a->e:创建借书记录
+activate e
+deactivate e
+a->c:借出资源
+activate c
+c->d:减少图书可借数量
+activate d
+deactivate d
+deactivate c
+a->b:减少可借限额
+activate b
+deactivate b
+a->e:记录借书
+activate e
+a->e:打印借书清单
+deactivate e
+deactivate a
+@enduml
