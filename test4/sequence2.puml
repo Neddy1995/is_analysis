@@ -1,0 +1,40 @@
+@startuml
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 20
+skinparam maxmessagesize 60
+skinparam sequenceParticipant underline
+
+actor 图书管理员 as a
+participant 资源项 as b
+participant 借书记录 as c
+participant 馆藏资源品种 as d
+participant 读者 as e
+participant 逾期记录 as f
+
+a -> b:获取资源信息
+activate a
+activate b
+b->c:读取借书记录
+activate c
+deactivate c
+b->d:读取资源品种
+activate d
+deactivate d
+deactivate b
+a->e:读取读者信息
+activate e
+deactivate e
+a->b:归还资源
+activate b
+b->d:增加资源的品种
+activate d
+deactivate d
+deactivate b
+a->c:登记还书日期
+activate c
+deactivate c
+a->f:登记逾期记录
+activate f
+deactivate f
+deactivate a
+@enduml
