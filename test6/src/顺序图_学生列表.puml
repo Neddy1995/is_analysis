@@ -1,0 +1,12 @@
+@startuml
+actor users
+users -> course: 选择学期和课程
+course -> students: 根据选择的学期与课程查看学生列表
+alt 如果users是老师
+	students -> grades
+	grades -> tests
+	tests --> users:每个学生的信息、及每个实验的成绩
+else 如果users是students，或者未登录
+    students --> users:每个学生的信息
+end
+@enduml

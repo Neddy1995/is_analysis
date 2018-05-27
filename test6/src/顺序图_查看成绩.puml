@@ -1,0 +1,7 @@
+@startuml
+actor students
+students -> course :选择学期与课程
+course -> grades: 查看成绩和评语
+grades -> tests
+tests --> students:每个实验的信息、成绩和评语
+@enduml
