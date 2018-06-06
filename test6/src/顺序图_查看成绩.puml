@@ -1,7 +1,10 @@
 @startuml
 actor students
-students -> course :选择学期与课程
-course -> grades: 查看成绩和评语
+students -> semester :选择学期
+semester -> course :选择课程
+course -> grades: 查看成绩
 grades -> tests
-tests --> students:每个实验的信息、成绩和评语
+tests ->test
+test ->evaluate:查看评语
+evaluate --> students:每个实验的信息、成绩和评语
 @enduml

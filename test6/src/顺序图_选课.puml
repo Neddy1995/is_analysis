@@ -1,0 +1,24 @@
+@startuml
+actor users
+== 教师选课 ==
+users -> teachers
+teachers -> semester :选择学期
+semester -> course:选择课程
+course -> class:创建班级
+class -> teacher_students_class
+teacher_students_class -->teachers:返回创建成功的课表
+teachers -> tests :创建实验课程
+tests ->teacher_test:制定实验项目
+teacher_test --> users:创建了课程供学生选课
+== 教师选课 ==
+== 学生选课 ==
+users ->students
+students -> semester:选择学期
+semester -> course:选择课程
+course -> grades:创建成绩表
+grades -> tests:创建实验课程表
+tests -> test :创建实验项目表
+test ->evaluate :创建评分项表
+evaluate -->users: 返回选课成功
+== 学生选课 ==
+@enduml

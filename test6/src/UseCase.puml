@@ -1,5 +1,4 @@
 @startuml
-title 基于GitHub的实验管理平台--用例图
 actor teachers
 actor students
 actor users

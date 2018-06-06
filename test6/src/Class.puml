@@ -17,18 +17,27 @@ class students{
     result_sum（成绩汇总）
     web_sum （网站正确与否汇总）
 }
-users <|- students
-users <|-- teachers
 
-class course {
-    <b>course_id</b> (课程编号)
-    major (所属专业)
-    time (开课学期)
-    hour (课时)
-    room （教室）
+class class{
+    <b>class_id</b> （班级号）
+    room（教室）
+    date（上课时间）
 }
-students "n" --down "n"  course:后选课
-teachers "n" --right "n"  course:先选课
+class teacher_students_class{
+    <b>teacher_students_class_id</b>（老师学生班级号）
+}
+
+class semester{
+    <b>semester_id</b> （学期号）
+    semester（学期）
+}
+
+class course{
+    <b>course_id</b> （课程编号）
+    major （所属专业）
+    hour （课时）
+}
+
 class grades {
     <b>student_id</b> （学号）
     <b>test_id</b> （实验编号）
@@ -38,10 +47,54 @@ class grades {
 }
 
 class tests {
-    <b>test_id</b> （实验编号）
-    title (实验名称)
+    <b>tests_id</b> （实验课程编号）
+    title （实验课程名称）
+    score （实验总分）
+}
+class teacher_tests{
+    <b>teacher_tests</b>（老师实验号）
+    tests_title（制定实验课程名称）
+    test_title（制定实验项目名称）
+    test_score（制定实验项目分数）
+    test_weight（制定实验项目权重）
+    evaluate_title（制定评分项内容）
+    evaluate_score（制定评分项分数）
+    evaluate_weight（制定评分项权重）
+
 }
 
+class test {
+    <b>test_id</b> （实验单项编号）
+    title （实验项目名称）
+    score （实验单项总得分）
+    weight （权重）
+}
+class evaluate{
+    <b>evaluate_id</b> （评分项号）
+    title （评分内容）
+    score （得分）
+    comment （评语）
+    weight （权重）
+}
+
+users <|- students
+users <|-- teachers
+
+teachers "1"--left"n" teacher_students_class
+teacher_students_class "1"--"1" class
+students "n" --down "1" teacher_students_class
+class "1"--down "n"course
+class "n"--"1" semester
+
+
+teachers "1"--"n" teacher_tests
+teacher_tests "1"--"1" tests
+teacher_tests "1"--"n" test
+teacher_tests "1"--"n" evaluate
+
+
+tests "1" -- "n" test
+test "1"-- "n" evaluate
 students "1" --right "n"  grades
 tests "1" --up "n" grades
 @enduml

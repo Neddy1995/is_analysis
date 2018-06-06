@@ -1,12 +1,14 @@
 @startuml
 actor users
-users -> course: 选择学期和课程
-course -> students: 根据选择的学期与课程查看学生列表
+users -> semester : 选择学期
+semester -> course :选择课程
+course -> class: 根据选择的学期与课程查寻班级
+class -> student: 按班级查找学生列表
 alt 如果users是老师
-	students -> grades
+	student -> grades
 	grades -> tests
 	tests --> users:每个学生的信息、及每个实验的成绩
 else 如果users是students，或者未登录
-    students --> users:每个学生的信息
+    class --> users:每个学生的信息
 end
 @enduml
