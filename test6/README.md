@@ -137,12 +137,12 @@
 |EVALUATE_SCORE|INT|3||是|空||评分项得分|
 |EVALUATE_WEIGHT|DOUBLE|3||是|空||评分项权重|
 ## 6.用例及界面详细设计
-* ["学生列表"用例](./用例/用例_学生列表.md)
-* ["评定成绩"用例](./用例/用例_评定成绩.md)
-* ["查看成绩"用例](./用例/用例_查看成绩.md)
-* ["修改密码"用例](./用例/用例_修改密码.md)
-* ["修改用户信息"用例](./用例/用例_修改用户信息.md)
-* ["查看用户信息"用例](./用例/用例_查看用户信息.md)
-* ["登出"用例](./用例/用例_登出.md)
-* ["登录"用例](./用例/用例_登录.md)
-* ["选课"用例](./用例/用例_选课.md)
+* ["学生列表"用例](./用例/用例_学生列表.md)，[界面](https://github.io/Neddy1995/is_analysis/tree/master/test6/ui/index.html)
+* ["评定成绩"用例](./用例/用例_评定成绩.md)，[界面](https://github.io/Neddy1995/is_analysis/tree/master/test6/ui/评定成绩.html)
+* ["查看成绩"用例](./用例/用例_查看成绩.md)，[界面](https://github.io/Neddy1995/is_analysis/tree/master/test6/ui/查看成绩.html)
+* ["修改密码"用例](./用例/用例_修改密码.md)，[界面](https://github.io/Neddy1995/is_analysis/tree/master/test6/ui/修改密码.html)
+* ["修改用户信息"用例](./用例/用例_修改用户信息.md)，[界面](https://github.io/Neddy1995/is_analysis/tree/master/test6/ui/修改用户信息.html)
+* ["查看用户信息"用例](./用例/用例_查看用户信息.md)，[界面](https://github.io/Neddy1995/is_analysis/tree/master/test6/ui/查看用户信息.html)
+* ["登出"用例](./用例/用例_登出.md)，[界面](https://github.io/Neddy1995/is_analysis/tree/master/test6/ui/index.html)
+* ["登录"用例](./用例/用例_登录.md)，[界面](https://github.io/Neddy1995/is_analysis/tree/master/test6/ui/login.html)
+* ["选课"用例](./用例/用例_选课.md)，[学生界面](https://github.io/Neddy1995/is_analysis/tree/master/test6/ui/学生选课.html)，[教师界面](https://github.io/Neddy1995/is_analysis/tree/master/test6/ui/教师选课.html)
