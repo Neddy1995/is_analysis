@@ -145,4 +145,4 @@
 * ["查看用户信息"用例](./用例/用例_查看用户信息.md)，[界面](https://Neddy1995.github.io/is_analysis/test6/ui/查看用户信息.html)
 * ["登出"用例](./用例/用例_登出.md)，[界面](https://Neddy1995.github.io/is_analysis/test6/ui/index.html)
 * ["登录"用例](./用例/用例_登录.md)，[界面](https://Neddy1995.github.io/is_analysis/test6/ui/login.html)
-* ["选课"用例](./用例/用例_选课.md)，[学生界面](https://Neddy1995.github.io/is_analysis/test6/ui/学生选课.html)[教师界面](https://Neddy1995.github.io/is_analysis/test6/ui/教师选课.html)
+* ["选课"用例](./用例/用例_选课.md)，[学生界面](https://Neddy1995.github.io/is_analysis/test6/ui/学生选课.html)，[教师界面](https://Neddy1995.github.io/is_analysis/test6/ui/教师选课.html)
