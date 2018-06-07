@@ -12,7 +12,7 @@
 * 系统自动计算每个学生的所有实验的平均分。
 ## 2.系统总体结构
 [![](./图片/all.png)](./all.pptx)
-* 界面设计参见：https://github.io/Neddy1995/is_analysis/blob/master/test6/ui/index.html
+* 界面设计参见：https://github.io/Neddy1995/is_analysis/test6/ui/index.html
 ## 3.用例图设计
 [![](./图片/UseCase.png)](src/UseCase.puml)
 ## 4.类图设计
